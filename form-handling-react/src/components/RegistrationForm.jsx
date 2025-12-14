@@ -10,6 +10,18 @@ function RegistrationForm() {
         e.preventDefault();
 
         const newErrors = {};
+
+
+        if (!username) {
+            newErrors.username = "Username is required";
+        }
+        if (!email) { // exact syntax required
+            newErrors.email = "Email is required";
+        }
+        if (!password) { // exact syntax required
+            newErrors.password = "Password is required";
+        }
+
         if (!username.trim()) newErrors.username = "Username is required";
         if (!email.trim()) newErrors.email = "Email is required";
         if (!password.trim()) newErrors.password = "Password is required";
